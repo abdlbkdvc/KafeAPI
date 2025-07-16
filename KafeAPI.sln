@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{97C39B95-2E96-481A-A19F-AB0A6F26604B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{1C4AE51D-25BA-434F-964D-F7CC5E878E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeAPI.Domain", "Core\KafeAPI.Domain\KafeAPI.Domain.csproj", "{C458EC67-F167-46C5-BA03-C70F0E8382E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeAPI.Application", "Core\KafeAPI.Application\KafeAPI.Application.csproj", "{D7BB5C0E-668F-425F-9671-924BFADC20EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeAPI.Persistence", "Infrastructure\KafeAPI.Persistence\KafeAPI.Persistence.csproj", "{95713559-35F5-4B0C-95A5-39DCAB1CA8B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KafeAPI.API", "Presentation\KafeAPI.API\KafeAPI.API.csproj", "{3B0BCF77-6035-4670-B349-4634EE0C8335}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{91E1E76D-E7A8-4B95-8A20-68F6E8941859}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "notes", "notes", "{3892B5A9-23E5-4778-82FF-97277C0B5188}"
+	ProjectSection(SolutionItems) = preProject
+		note.txt = note.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C458EC67-F167-46C5-BA03-C70F0E8382E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C458EC67-F167-46C5-BA03-C70F0E8382E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C458EC67-F167-46C5-BA03-C70F0E8382E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C458EC67-F167-46C5-BA03-C70F0E8382E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7BB5C0E-668F-425F-9671-924BFADC20EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7BB5C0E-668F-425F-9671-924BFADC20EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7BB5C0E-668F-425F-9671-924BFADC20EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7BB5C0E-668F-425F-9671-924BFADC20EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95713559-35F5-4B0C-95A5-39DCAB1CA8B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95713559-35F5-4B0C-95A5-39DCAB1CA8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95713559-35F5-4B0C-95A5-39DCAB1CA8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95713559-35F5-4B0C-95A5-39DCAB1CA8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B0BCF77-6035-4670-B349-4634EE0C8335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B0BCF77-6035-4670-B349-4634EE0C8335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B0BCF77-6035-4670-B349-4634EE0C8335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B0BCF77-6035-4670-B349-4634EE0C8335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C458EC67-F167-46C5-BA03-C70F0E8382E1} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D7BB5C0E-668F-425F-9671-924BFADC20EF} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{95713559-35F5-4B0C-95A5-39DCAB1CA8B4} = {97C39B95-2E96-481A-A19F-AB0A6F26604B}
+		{3B0BCF77-6035-4670-B349-4634EE0C8335} = {1C4AE51D-25BA-434F-964D-F7CC5E878E6A}
+		{3892B5A9-23E5-4778-82FF-97277C0B5188} = {91E1E76D-E7A8-4B95-8A20-68F6E8941859}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4F1DA95-E929-420E-B950-8E573A4037B1}
+	EndGlobalSection
+EndGlobal
