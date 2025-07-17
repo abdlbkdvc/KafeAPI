@@ -34,7 +34,7 @@ namespace KafeAPI.Application.Services.Concrete
                     {
                         Success = false,
                         Message = string.Join(",", validate.Errors.Select(x => x.ErrorMessage)),
-                        ErrorCodes = ErrorCodes.ValidationError
+                        ErrorCode = ErrorCodes.ValidationError
                     };
                 }
                 var category = _mapper.Map<Category>(dto);
@@ -54,7 +54,7 @@ namespace KafeAPI.Application.Services.Concrete
                     Success = false,
                     Data = null,
                     Message = "Bir hata oluştu.",
-                    ErrorCodes = ErrorCodes.Exception
+                    ErrorCode = ErrorCodes.Exception
                 };
             }
 
@@ -72,7 +72,7 @@ namespace KafeAPI.Application.Services.Concrete
                         Success = false,
                         Data = null,
                         Message = "Kategori bulunmadı.",
-                        ErrorCodes = ErrorCodes.NotFound
+                        ErrorCode = ErrorCodes.NotFound
                     };
                 }
                 await _repository.DeleteAsync(category);
@@ -90,7 +90,7 @@ namespace KafeAPI.Application.Services.Concrete
                 {
                     Success = false,
                     Data = null,
-                    ErrorCodes = ErrorCodes.Exception,
+                    ErrorCode = ErrorCodes.Exception,
                     Message = "Bir hata oluştu."
                 };
             }
@@ -107,7 +107,7 @@ namespace KafeAPI.Application.Services.Concrete
                     {
                         Success = false,
                         Message = "Kategori bulunumadı",
-                        ErrorCodes = ErrorCodes.NotFound
+                        ErrorCode = ErrorCodes.NotFound
                     };
                 }
                 var result = _mapper.Map<List<ResultCategoryDto>>(categories);
@@ -124,7 +124,7 @@ namespace KafeAPI.Application.Services.Concrete
                 {
                     Success = false,
                     Message = "Bir hata oluştu",
-                    ErrorCodes = ErrorCodes.Exception
+                    ErrorCode = ErrorCodes.Exception
                 };
             }
 
@@ -141,7 +141,7 @@ namespace KafeAPI.Application.Services.Concrete
                     {
                         Success = false,
                         Message = "Kategori bulunamadı.",
-                        ErrorCodes = ErrorCodes.NotFound
+                        ErrorCode = ErrorCodes.NotFound
                     };
                 }
                 var result = _mapper.Map<DetailCategoryDto>(category);
@@ -158,7 +158,7 @@ namespace KafeAPI.Application.Services.Concrete
                 {
                     Success = false,
                     Message = "Bir hata oluştu",
-                    ErrorCodes = ErrorCodes.Exception
+                    ErrorCode = ErrorCodes.Exception
                 };
             }
 
@@ -177,7 +177,7 @@ namespace KafeAPI.Application.Services.Concrete
                         Success = false,
                         Data = null,
                         Message = string.Join(",", validate.Errors.Select(x => x.ErrorMessage)),
-                        ErrorCodes = ErrorCodes.ValidationError
+                        ErrorCode = ErrorCodes.ValidationError
                     };
                 }
                 var categorydb = await _repository.GetByIdAsync(dto.Id);
@@ -187,7 +187,7 @@ namespace KafeAPI.Application.Services.Concrete
                     {
                         Success = false,
                         Message = "Kategori bulunumadı.",
-                        ErrorCodes = ErrorCodes.NotFound
+                        ErrorCode = ErrorCodes.NotFound
                     };
                 }
                 var category = _mapper.Map(dto, categorydb);
@@ -207,7 +207,7 @@ namespace KafeAPI.Application.Services.Concrete
                 {
                     Data = null,
                     Message = "Bir hata oluştu",
-                    ErrorCodes = ErrorCodes.Exception
+                    ErrorCode = ErrorCodes.Exception
                 };
             }
 
