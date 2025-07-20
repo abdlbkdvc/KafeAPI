@@ -7,7 +7,7 @@ namespace KafeAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CategoriesController : ControllerBase
+    public class CategoriesController : BaseController
     {
         private readonly ICategoryServices _categoryServices;
         public CategoriesController(ICategoryServices categoryServices)
@@ -18,73 +18,33 @@ namespace KafeAPI.API.Controllers
         public async Task<IActionResult> GetAllCategories()
         {
             var result = await _categoryServices.GetAllCategories();
-            if (!result.Success)
-            {
-                if (result.ErrorCodes == ErrorCodes.NotFound)
-                {
-                    return Ok(result);
-                }
-                return BadRequest(result);
-            }
-            return Ok(result);
+            return CreateResponse(result);
         }
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdCategory(int id)
         {
             var result = await _categoryServices.GetByIdCategory(id);
-            if (!result.Success)
-            {
-
-                if (result.ErrorCodes == ErrorCodes.NotFound)
-                {
-                    return Ok(result);
-                }
-                return BadRequest(result);
-            }
-            return Ok(result);
+            return CreateResponse(result);
         }
         [HttpPost]
         public async Task<IActionResult> AddCategory(CreateCategoryDto dto)
         {
             var result = await _categoryServices.AddCategory(dto);
-            if (!result.Success)
-            {
-                if (result.ErrorCodes == ErrorCodes.NotFound)
-                {
-                    return Ok(result);
-                }
-                return BadRequest(result);
-            }
-            return Ok(result);
+
+            return CreateResponse(result);
         }
         [HttpPut]
         public async Task<IActionResult> UpdateCategory(UpdateCategoryDto dto)
         {
 
             var result = await _categoryServices.UpdateCategory(dto);
-            if (!result.Success)
-            {
-                if (result.ErrorCodes is ErrorCodes.NotFound or ErrorCodes.ValidationError)
-                {
-                    return Ok(result);
-                }
-                return BadRequest(result);
-            }
-            return Ok(result);
+            return CreateResponse(result);
         }
         [HttpDelete]
         public async Task<IActionResult> DeleteCategory(int id)
         {
             var result = await _categoryServices.DeleteCategory(id);
-            if (!result.Success)
-            {
-                if (result.ErrorCodes == ErrorCodes.NotFound)
-                {
-                    return Ok(result);
-                }
-                return BadRequest(result);
-            }
-            return Ok(result);
+            return CreateResponse(result);
         }
     }
 }
